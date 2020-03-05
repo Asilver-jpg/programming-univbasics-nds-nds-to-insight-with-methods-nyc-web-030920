@@ -27,6 +27,6 @@ def directors_totals(nds)
     result[director[:name]]= total
       
   end
- # binding.pry
+ binding.pry
      result
 end
