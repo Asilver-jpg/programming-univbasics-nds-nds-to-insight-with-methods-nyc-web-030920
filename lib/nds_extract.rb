@@ -24,7 +24,7 @@ def directors_totals(nds)
   nds.each do |director| 
   
     a= gross_for_director(director)
-        result[a[:name]]= a.value
+        result[a.key]= a.value
   end
  binding.pry
      result
