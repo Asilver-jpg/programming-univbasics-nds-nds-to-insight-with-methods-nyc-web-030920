@@ -4,13 +4,12 @@ require "pry"
 # Find a way to accumulate the :worldwide_grosses and return that Integer
 # using director_data as input
 def gross_for_director(director_data)
-  hash={}
+  
   total =0 
   director_data[:movies].each do |movie|
   total += movie[:worldwide_gross]
   end
-   hash[director_data[:name]] = total
-   hash
+   total
 end
 
 # Write a method that, given an NDS creates a new Hash
@@ -24,7 +23,7 @@ def directors_totals(nds)
   nds.each do |director| 
   
     a= gross_for_director(director)
-        result[] = a.value
+       result[director:name] = a
   end
  binding.pry
      result
